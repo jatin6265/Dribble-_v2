@@ -3,8 +3,7 @@ const dotenv = require("dotenv").config({ path: "./hi.env" });
 
 mongoose
   .connect(
-    
-    `mongodb+srv://${process.env.username}:${process.env.password}@cluster0.1dprcrn.mongodb.net/${process.env.databaseName}`,
+    `mongodb://chouhanjatin6265:${process.env.password}@ac-0pjbder-shard-00-00.1dprcrn.mongodb.net:27017,ac-0pjbder-shard-00-01.1dprcrn.mongodb.net:27017,ac-0pjbder-shard-00-02.1dprcrn.mongodb.net:27017/?ssl=true&replicaSet=atlas-jvkgjj-shard-0&authSource=admin&retryWrites=true&w=majority&appName=Cluster0`
   )
   .then(() => {
     console.log("Connected to MongoDB Atlas");
