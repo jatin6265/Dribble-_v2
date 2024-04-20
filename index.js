@@ -26,8 +26,16 @@ app.use(
       maxAge: 1000 * 60 * 100, // 100 minutes
       secure: false,
       httpOnly: true,
-    },store: MongoStore.create(
-      { mongoUrl: "mongodb://localhost:27017/Dribble", autoRemove: "disabled" },
+    },
+    store: MongoStore.create({
+      mongoUrl: `mongodb://chouhanjatin6265:${process.env.password}@ac-0pjbder-shard-00-00.1dprcrn.mongodb.net:27017,`
+        + `ac-0pjbder-shard-00-01.1dprcrn.mongodb.net:27017,`
+        + `ac-0pjbder-shard-00-02.1dprcrn.mongodb.net:27017/?ssl=true&`
+        + `replicaSet=atlas-jvkgjj-shard-0&authSource=admin&retryWrites=true&w=majority&appName=Cluster0`,
+      autoRemove: "disabled"
+    },
+    // store: MongoStore.create(
+    //   { mongoUrl: "mongodb://localhost:27017/Dribble", autoRemove: "disabled" },
       function (err) {
         console.log(err || "connect mongo-db setup ok");
       }
