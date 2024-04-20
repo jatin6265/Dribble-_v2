@@ -3,11 +3,11 @@ const dotenv = require("dotenv").config({ path: "./hi.env" });
 
 mongoose
   .connect(
-    `mongodb+srv://${process.env.username}:${process.env.password}@cluster0.1dprcrn.mongodb.net/${process.env.databaseName}?retryWrites=true&w=majority&appName=Cluster0`,
+    `mongodb+srv://${process.env.username}:${process.env.password}@cluster0.1dprcrn.mongodb.net/${process.env.databaseName}`,
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
-      serverSelectionTimeoutMS: 5000, // Timeout after 5 seconds
+      serverSelectionTimeoutMS: 10000, 
     }
   )
   .then(() => {
