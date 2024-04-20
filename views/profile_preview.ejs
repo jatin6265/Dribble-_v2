@@ -1,0 +1,89 @@
+<link rel="stylesheet" href="/css/profile_preview.css" />
+<div class="main">
+    <section id="section1" class="fontfamily">
+        <div class="imgContainer">
+            <div class="logoContainer" style="margin-right:2.45%;"><img class="logo1" src="/images/logo.png" alt="">
+            </div>
+
+        </div>
+        <div class="profile">
+            <div class="wrapp">
+                <h2>Welcome! <%=locals.user.name%> Let's create your profile</h2>
+                <p id="par1">Let others get to know you better! You can do these later</p>
+                <div class="avatarContainer">
+                    <h3>Add an avatar</h3>
+                    <form action="/users/update/<%=locals.user.id%>" method="post" enctype="multipart/form-data" >
+                        <div class="chooseAvatar">
+                            <div class="imgPlaceholder">
+                                <img id="user-profile" src="/svgs/camera.svg" alt="img" />
+                            </div>
+                            <div class="uploadBtn">
+
+                                <input type="file" name="avatar" accept="image/*" />
+                                <p>> Or choose one of our defauls</p>
+                            </div>
+                        </div>
+                        <h3>Add your location</h3>
+                        <input type="text" placeholder="Enter a location" name="location">
+                        <input type="submit" value="Next">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="section2" class="fontfamily">
+        <div class="imgContainer">
+            <div class="logoContainer"><img class="logo1" src="/images/logo.png" alt="">
+                <img class="backBtn" src="/svgs/back-arrow.svg" alt="">
+            </div>
+        </div>
+
+        <div class="wrapp">
+            <div class="heading">
+                <h2>What bring's you to Dribble?</h2>
+                <p id="para1">Select the option that best describes you. Don't worry , you can explore other options
+                    later.</p>
+            </div>
+            <div class="formContainer">
+                <form action="/">
+                    <div class="tile">
+                        <div class="card1">
+                            <input type="checkbox" name="reason" id="checkbox1" value="1">
+                            <label for="card1">
+                                <img src="/images/lamp-card.png" alt="">
+                                <h2>I'am designer looking to share my work</h2>
+                                <p>With over seven 7 million shots from a from a vast community of designer, Dribble is
+                                    the leading source for design inspiration.</p>
+                            </label>
+                        </div>
+                        <div class="card2">
+                            <input type="checkbox" name="reason" id="checkbox2" value="2">
+                            <label for="card2">
+                                <img src="/images/girl-card.png" alt="">
+                                <h2>I'am designer looking to share my work</h2>
+                                <p>With over seven 7 million shots from a from a vast community of designer, Dribble is
+                                    the leading source for design inspiration.</p>
+                            </label>
+                        </div>
+                        <div class="card3">
+                            <input type="checkbox" name="reason" id="checkbox3" value="3">
+                            <label for="card3">
+                                <img src="/images/bulb-card.png" alt="">
+                                <h2>I'am designer looking to share my work</h2>
+                                <p>With over seven 7 million shots from a from a vast community of designer, Dribble is
+                                    the leading source for design inspiration.</p>
+                            </label>
+                        </div>
+
+                    </div>
+                    <p id="para2">Anyhting else? You can select multiple</p>
+                    <input type="submit" value="Finish">
+                    <p id="para3">or Press RETURN</p>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script src="/js/profile.js"></script>

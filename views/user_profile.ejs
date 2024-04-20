@@ -1,0 +1,34 @@
+<link rel="stylesheet" href="/css/user_profile.css">
+
+<div class="main">
+    <section id="section1" class="fontfamily">
+        
+        <div class="profile">
+            <div class="wrapp">
+                <h2 id="userName"><%=user.name%></h2>
+                <p id="par1"><%=user.email%></p>
+                <div class="avatarContainer">
+                    <h3>Your Profile</h3>
+                    <form action="/users/update-basic/<%=user.id%>" method="post">
+                        <div class="chooseAvatar">
+                            <div class="imgPlaceholder">
+                                <%if(user.avatar){%>
+                                    <img id="user-profile" src="<%=user.avatar%>" alt="<%=user.name%>" />
+                                <%}else{%> 
+                                    <img src="/svgs/camera.svg" alt="img" />
+                                <%}%>
+        
+                            </div>
+                        </div>
+                        <h3>Name</h3>
+                        <input type="text" placeholder="Name" name="name" value="<%=user.name%>">
+                        <h3>Location</h3>
+                        <input type="text" placeholder="location" name="location" value="<%=user.location%>">
+                        <input type="submit" value="Next">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<script src="/js/user_profile.js"></script>

@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="/css/upload_picture.css">
+
+<div class="main">
+    <section id="section1" class="fontfamily">
+        
+        <div class="profile">
+            <div class="wrapp">
+                <h2>Hi! <%=user.name%> Let's Update  your profile </h2>
+                <p id="par1">Let others get to know you better! You can do these later</p>
+                <div class="avatarContainer">
+                    <h3>Add an avatar</h3>
+                    <form action="/users/update/<%=user.id%>" method="post" enctype="multipart/form-data">
+                        <div class="chooseAvatar">
+                            <div class="imgPlaceholder">
+                                <%if(user.avatar){%>
+                                    <img id="user-profile" src="<%=user.avatar%>" alt="<%=user.name%>" />
+                                <%}else{%> 
+                                    <img src="/svgs/camera.svg" alt="img" />
+                                <%}%>
+        
+                            </div>
+                            <div class="uploadBtn">
+
+                                <input type="file" name="avatar" accept="image/*" />
+                                <p>> Or choose one of our defauls</p>
+                            </div>
+                        </div>
+                        <h3>Location</h3>
+                        <input type="text" placeholder="location" name="location" value="<%=user.location%>">
+                        <input type="submit" value="Next">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<script src="/js/upload_picture.js"></script>

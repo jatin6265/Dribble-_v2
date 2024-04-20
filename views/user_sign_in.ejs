@@ -1,0 +1,60 @@
+<link rel="stylesheet" href="/css/user_sign_in.css" />
+<div class="main">
+    <div class="container fontfamily">
+        <div class="leftBox">
+             <div class="rightTopInfo">
+                <a href="/"><img src="/images/login-dribble.png" alt=""></a>
+                <p>Discover the world's top</p>
+                <p>Design and Creatives.</p>
+            </div>
+
+            <img src="/images/banner.png" alt="" />
+            <p id="author">Art by <u>Jatin Chouhan</u></p>
+        </div>
+        <div id="rightBoxWrapper">
+            <p class="login ">Not a member ?&nbsp;<a href="/users/sign-up"> Sign Up</a> </p>
+            <div class="rightBox">
+                <div class="formContainer">
+                    <div class="topBox">
+                        <h2>Sign In to Dirbble</h2>
+                        <h6 id="warning" style="height: 1rem"> * Warning</h6>
+                    </div>
+                    <div class="bottomBox">
+                        <form action="/users/create-session" method="post">
+
+                            <div class="inpEmail">
+                                <label for="email">Email</label><br />
+                                <input class="inputStyle" type="email" placeholder="Email" name="email" required />
+                            </div>
+                            <div class="inpPassword">
+                                <label for="password">Password</label><br />
+                                <input class="inputStyle" type="password" placeholder="6+ Character" name="password"
+                                    required />
+                            </div>
+
+                            <button>Sign In</button>
+                            <h6><span>or</span></h6>
+                            <a href="">
+                                <div class="google">
+                                    <img src="/svgs/google-logo.svg" alt="">
+                                    <a href="/users/auth/google"><p>Continue with google</p></a>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="gamil">
+                                    <img src="/svgs/gmail-logo.svg" alt="">
+                                    <p> Continue with gmail </p>
+                                </div>
+                            </a>
+                            <p class="policy">
+                                This site is protected by reCAPTCHA and the Google
+                                <a href="">Privacy Policy</a>and
+                                <a href="">Terms of Service</a> apply.
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

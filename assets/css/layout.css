@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+main{
+    width: 100vw;
+    height: calc(100vh - 70px);
+
+}
+
+.bodyWrap{
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+}
+
+.sidebarWrap{
+    position:absolute;
+    width: 250px;
+    height:calc(100vh - 70px);
+    left:-50vmax;
+    transition: left ease-in-out ;
+    transition-duration: 500ms;
+}
+.barMenu{
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    margin: 5px;
+    padding: 10px 20px 20px 20px;
+    border-radius: 10px;
+    background-color: #fafafa;
+    border: 0.5px solid rgb(208, 208, 208);
+    overflow: hidden;
+}
+
+.barMenu .back{
+ text-align: end;
+}
+
+.webInfo{
+    display: flex;
+    align-items: center;
+    height: 10%;
+    gap: 10px;
+}
+
+.webInfo img{
+   height: 50px;
+}
+
+.webInfo p{
+  font-size: 1.6rem;
+  color: #525252;
+}
+
+.barMenu hr{
+    border: 0;
+    margin-top: 5px;
+    width: 100%;
+    height: 1px;
+    background-color: rgb(208, 208, 208);
+  }
+
+.menuList{
+    height: 60%;
+}
+
+.menuList .listItem{
+    height:15%;
+    width: 100%;
+    margin: 10px 0px;
+    /* border: 1px solid #525252; */
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: #525252;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: all 50ms;
+}
+
+.menuList .listItem:hover{
+    background-color: #ea4b8bee;
+    color: white;
+    font-weight: 600;
+
+}
+
+.listItem p:hover{
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+}

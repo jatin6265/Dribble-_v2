@@ -1,0 +1,138 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+#section1 {
+    height: calc(100vh - 70px);
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    transition: all;
+    transition-duration: 200ms;
+}
+
+
+#section1 .profile {
+    margin: auto;
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    min-width: 400px;
+    height: 90%;
+    padding: 10px;
+    max-width: 450px;
+    max-height: 700px;
+}
+
+.profile .wrapp {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 5% 5% 5%;
+}
+
+.profile .wrapp #par1 {
+    font-size: 0.75rem;
+    color: #7c7979;
+}
+
+.profile .wrapp h2 {
+  padding-top:7% ;
+}
+
+.avatarContainer h3 {
+    font-size: 1rem;
+
+}
+
+.avatarContainer .uploadBtn p {
+    font-size: .75rem;
+    color: #9c9797;
+    margin-top: 15px;
+}
+
+.wrapp .avatarContainer {
+    height: 80%;
+    padding: 10px 0px;
+}
+
+.wrapp .avatarContainer form {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.profile .chooseAvatar {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin: 20px 0px;
+}
+
+.profile form input[type='text'] {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #b0b0b0;
+    height: 30px;
+    outline: none;
+    font-size: 1rem;
+    padding-left: 10px;
+}
+
+.profile form input[type='submit'] {
+    width: 160px;
+    height: 30px;
+    border: none;
+    background-color: #ea4b8a;
+    border-radius: 5px;
+    color: white;
+    font-weight: 700;
+}
+
+
+.profile .chooseAvatar .imgPlaceholder {
+
+    height: 110px;
+    width: 110px;
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #b0b0b0;
+    overflow: hidden;
+}
+
+.imgPlaceholder #user-profile{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    border:1px solid  rgba(255, 255, 255, 0);
+    border-radius: 50%;
+}
+
+
+@media(max-width:900px) {
+
+    .profile .chooseAvatar .imgPlaceholder {
+
+        height: 80px;
+        width: 80px;
+    }
+
+    .profile .wrapp h2 {
+        font-size: 1.3rem;
+    }
+
+
+    .profile form input[type='file'] {
+        font-size: .8rem;
+    }
+
+
+}

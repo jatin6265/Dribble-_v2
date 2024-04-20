@@ -1,0 +1,73 @@
+<link rel="stylesheet" href="/css/user_sign_up.css" />
+<main>
+    <div class="container fontfamily">
+        <div class="leftBox">
+            <div class="rightTopInfo">
+                <a href="/"><img src="/images/login-dribble.png" alt=""></a>
+                <p>Discover the world's top</p>
+                <p>Design and Creatives.</p>
+            </div>
+            
+            <img src="/images/banner.png" alt="" />
+            <p id="author">Art by <u>Jatin Chouhan</u></p>
+        </div>
+        <div id="rightBoxWrapper">
+            <p  class="login ">Already a member ?&nbsp;<a href="/users/sign-in"> Sign In</a> </p>
+            <div class="rightBox">
+                <div class="formContainer">
+                    <div class="topBox">
+                        <h2>Sign up to Dirbble</h2>
+                        <h6 id="warning" style="height: 1rem"> * Warning</h6>
+                    </div>
+                    <div class="bottomBox">
+                        <form action="/users/create" method="post">
+                            <div class="nameInfo displayFlex">
+                                <div class="inpName">
+                                    <label for="name">Name</label><br />
+                                    <input class="inputStyle" type="text" placeholder="Name" name="name" required />
+                                </div>
+                                <div class="inpUsername">
+                                    <label for="username">Username</label><br />
+                                    <input class="inputStyle" type="text" placeholder="Username" name="username" required />
+                                </div>
+                            </div>
+                            <div class="inpEmail">
+                                <label for="email">Email</label><br />
+                                <input class="inputStyle" type="email" placeholder="Email" name="email" required />
+                            </div>
+                            <div class="inpPassword">
+                                <label for="password">Password</label><br />
+                                <input class="inputStyle" type="password" placeholder="6+ Character" name="password" required />
+                            </div>
+                            <div class="inpCheckbox">
+                                <input type="checkbox" name="agreement"  value="agreed" required />
+                                <div>
+                                    <p>
+                                        Creating an account means you'er ok withour
+                                        <a href="">Terms of serivces, Privacy Policy,</a>and our
+                                        default
+                                        <a href="">Notification Settings.</a>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <button>Create Account</button>
+                            <h6><span>or</span></h6>
+                            <a href="">
+                                <div class="google">
+                                    <img src="/svgs/google-logo.svg" alt="">
+                                    <a href="/users/auth/google"><p>Continue with google</p></a>
+                                </div>
+                            </a>
+                            <p class="policy">
+                                This site is protected by reCAPTCHA and the Google
+                                <a href="">Privacy Policy</a>and
+                                <a href="">Terms of Service</a> apply.
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

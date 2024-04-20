@@ -1,0 +1,375 @@
+.nav {
+    display: none;
+}
+
+
+.main {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+#section1 {
+    height: calc(100vh - 70px);
+    width: 100%;
+    position: relative;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    transition: all;
+    transition-duration: 200ms;
+}
+
+.logoContainer {
+    width: 90%;
+    height: 100%;
+    align-items: center;
+    display: flex;
+}
+
+section .imgContainer {
+    height: 10%;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+section .imgContainer .logo1 {
+    height: 150%;
+}
+
+#section1 .profile {
+    margin: auto;
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    min-width: 400px;
+    height: 90%;
+    padding: 10px;
+    max-width: 450px;
+    max-height: 700px;
+}
+
+.profile .wrapp {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 5% 5% 5%;
+}
+
+.profile .wrapp #par1 {
+    font-size: 0.75rem;
+    color: #7c7979;
+}
+
+.avatarContainer h3 {
+    font-size: 1rem;
+
+}
+
+.avatarContainer .uploadBtn p {
+    font-size: .75rem;
+    color: #9c9797;
+    margin-top: 15px;
+}
+
+.wrapp .avatarContainer {
+    height: 80%;
+    padding: 10px 0px;
+}
+
+.wrapp .avatarContainer form {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.profile .chooseAvatar {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin: 20px 0px;
+}
+
+.profile form input[type='text'] {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #b0b0b0;
+    height: 30px;
+    outline: none;
+}
+
+.profile form input[type='submit'] {
+    width: 160px;
+    height: 30px;
+    border: none;
+    background-color: #ea4b8a;
+    border-radius: 5px;
+    color: white;
+    font-weight: 700;
+}
+
+
+.profile .chooseAvatar .imgPlaceholder {
+
+    height: 110px;
+    width: 110px;
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #b0b0b0;
+    overflow: hidden;
+}
+
+#section1 .imgPlaceholder #user-profile {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-radius: 50%;
+}
+
+@media(max-width:900px) {
+
+    .profile .chooseAvatar .imgPlaceholder {
+
+        height: 80px;
+        width: 80px;
+    }
+
+    .profile .wrapp h2 {
+        font-size: 1.3rem;
+    }
+
+
+    .profile form input[type='file'] {
+        font-size: .8rem;
+    }
+
+
+}
+
+/* section 2  */
+
+#section2 {
+    height: calc(100vh - 70px);
+    width: 100vw;
+    position: absolute;
+    background-color: #ffffff;
+    overflow-y: scroll;
+    right: -100%;
+    overflow-x: hidden;
+    transition: all;
+    transition-duration: 200ms;
+}
+
+#section2 .wrapp {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#section2 .wrapp .heading {
+    display: flex;
+    height: 20%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+.wrapp .heading h2 {
+    font-size: 2rem;
+}
+
+
+
+#section2 .formContainer {
+    height: 80%;
+}
+
+#section2 .formContainer form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    outline: none;
+}
+
+.formContainer .tile {
+    display: flex;
+    align-items: center;
+    min-width: 100vmin;
+    width: 65vw;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 10px;
+
+}
+
+
+
+.formContainer .tile input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    min-height: 200px;
+    min-width: 200px;
+    height: 35vh;
+    width: 20vw;
+    border: 1px solid rgb(224, 224, 224);
+    border-radius: 10%;
+    outline: none;
+    position: relative;
+    z-index: 1;
+}
+
+.tile input[type="checkbox"]:before {
+    content: "";
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: 2px solid #ea4b8a;
+    top: 80%;
+    left: calc(50% - 7.5px);
+}
+
+.tile input[type="checkbox"]::after {
+    content: "";
+    position: absolute;
+    height: 11px;
+    width: 11px;
+    border-radius: 50%;
+    top: calc(80% + 2px);
+    left: calc(50% - 5.5px);
+    border: 2px solid #ffffff;
+    background-color: transparent;
+}
+
+.card1,
+.card2,
+.card3 {
+    position: relative;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.card1 label,
+.card2 label,
+.card3 label {
+    position: absolute;
+    bottom: 20%;
+    padding: 5%;
+}
+
+
+.card1 label P,
+.card2 label P,
+.card3 label P {
+    font-size: .7rem;
+    display: none;
+    padding: 7px;
+}
+
+.card1 label h2,
+.card2 label h2,
+.card3 label h2 {
+    font-size: 1.3rem;
+
+}
+
+.card1 label img {
+    width: 95%;
+    padding: 10px;
+}
+
+.card2 label img {
+    width: 65%;
+    padding: 10px;
+}
+
+.card3 label img {
+    width: 95%;
+    padding: 10px;
+
+}
+
+
+.formContainer form input[type='submit'] {
+    width: 170px;
+    height: 35px;
+    border: none;
+    background-color: #ea4b8a;
+    border-radius: 5px;
+    color: white;
+    font-weight: 700;
+    padding: 5px;
+}
+
+.formContainer #para3 {
+    font-size: .7rem;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+
+.tile input[type="checkbox"]:checked {
+    border: 3px solid #ea4b8a;
+}
+
+.tile input[type="checkbox"]:checked::after {
+    background-color: #ea4b8a;
+}
+
+@media(max-width:750px) {
+    .formContainer .tile {
+        flex-direction: column;
+    }
+
+    .wrapp .heading h2 {
+        font-size: 1.5rem;
+    }
+
+    .wrapp .heading p {
+        font-size: .8rem;
+    }
+
+    .card1 label P,
+    .card2 label P,
+    .card3 label P {
+        font-size: .7rem;
+        display: none;
+    }
+
+    .card1 label h2,
+    .card2 label h2,
+    .card3 label h2 {
+        font-size: 1.1rem;
+
+    }
+
+    .formContainer .tile input[type="checkbox"] {
+        -webkit-appearance: none;
+        appearance: none;
+        min-height: 200px;
+        min-width: 200px;
+        height: 30vh;
+        width: 20vw;
+    }
+
+    .formContainer #para2 {
+        font-size: .8rem;
+        padding: 7px;
+    }
+
+}

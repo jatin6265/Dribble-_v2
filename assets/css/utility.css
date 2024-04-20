@@ -1,0 +1,22 @@
+.displayFlex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.border {
+    border: 2px solid red;
+}
+
+.fontFamily {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+.fontfamily{
+    font-family: 'Roboto', sans-serif;
+}
+
+
+

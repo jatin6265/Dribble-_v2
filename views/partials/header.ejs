@@ -1,0 +1,106 @@
+<link rel="stylesheet" href="/css/upload_picture.css">
+<header>
+  <div class="nav displayFlex">
+    <div class="Left displayFlex">
+      <div class="hamburger">
+        <img src="/svgs/hamburger.svg" />
+      </div>
+      <a href="/">
+        <div class="imgContainer">
+          <img class="navLogo" src="/images/logo.png" />
+        </div>
+      </a>
+      <ul class="menuItems displayFlex fontFamily">
+        <li>Inspiration</li>
+        <li>Find Work</li>
+        <li>Learn Designe</li>
+        <li>Go Pro</li>
+        <li>Hire Designers</li>
+      </ul>
+    </div>
+    <div class="Right displayFlex">
+      <form action="" class="searchBar">
+        <input type="search" placeholder="search" />
+      </form>
+      <div class="bag">
+        <img src="/svgs/cart.svg" alt="" />
+      </div>
+    
+        <div class="profileImg " id="toggleButton" >
+          <%if(locals.user){%>
+            <%if(locals.user.avatar){%>
+              <img id="user-profile" src="<%=user.avatar%>" alt="<%=user.name%>"  />
+              <%}else{%><img src="/svgs/camera.svg" alt="img" />
+                <%}%>
+                  <%}else{%>
+                    <img src="/svgs/camera.svg" alt="img" />
+                    <%}%>
+                   
+        </div>
+      
+
+      <div class="submenuWrap hidden" id="subMenu">
+        <div class="submenu">
+          <div class="userInfo">
+            <a href="/users/user-profile"> <div class="imgContainer">
+            <%if(locals.user){%>
+              <%if(locals.user.avatar){%>
+                <img id="user-profile" src="<%=user.avatar%>" alt="<%=user.name%>" />
+                <%}else{%><img style="height: 25px; width: 25px;" src="/svgs/camera.svg" alt="img" />
+                  <%}%>
+                    <%}else{%>
+                      <img src="/svgs/camera.svg" alt="img" />
+                      <%}%>
+                    </div>
+                    <%if(locals.user){%>
+                      <h2><%=user.name%></h2>
+                     <%}%>
+          </div></a>
+          <hr>
+          <a href="/users/user-profile" class="submenuLink">
+            <img src="/svgs/account.svg" alt="">
+            <p>Edit Profile</p>
+            <span>></span>
+          </a>
+          <a href="" class="submenuLink">
+            <img src="/svgs/settings.svg" alt="">
+            <p>Settings & Privacy</p>
+            <span>></span>
+          </a>
+          <a href="" class="submenuLink">
+            <img src="/svgs/help.svg" alt="">
+            <p>Help & Support</p>
+            <span>></span>
+          </a>
+        <% if (locals.user) { %>
+          
+          <a href="/users/sign-out" class="submenuLink">
+            <img src="/svgs/logout.svg" alt="">
+            <p>Logout</p>
+            <span>></span>
+          </a>
+          <% } else { %>
+            <a href="/users/sign-in" class="submenuLink">
+              <img src="/svgs/login.svg" alt="">
+              <p>Sign In</p>
+              <span>></span>
+            </a>
+          <% } %>
+        </div>
+      </div>
+
+      <% if (locals.user) { %>
+        <button class="editProfile fontFamily" value="Upload"
+          onclick="document.location='/users/upload-picture/<%= user.id %>'">
+          Upload
+        </button>
+        <% } else { %>
+          <button class="editProfile fontFamily" value="Upload" onclick="document.location='/users/sign-in'">
+            Sign In
+          </button>
+          <% } %>
+    </div>
+  </div>
+</header>
+
+<script src="/js/header.js"></script>

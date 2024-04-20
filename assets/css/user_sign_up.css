@@ -1,0 +1,407 @@
+.nav {
+    display: none;
+}
+
+main {
+    height: calc(100vh - 70px);
+    width: 100vw;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+main .container {
+    display: flex;
+    align-items: center;
+}
+
+main .leftBox {
+
+    height: calc(100vh - 70px);
+    width: 35%;
+    background-color: #f4d284;
+    max-width: 450px;
+
+    display: flex;
+    justify-content: center;
+
+}
+
+main .leftBox img {
+    object-fit: contain;
+    max-width: 450px;
+    width: 100%;
+    height: 100%;
+    word-wrap: break-word;
+}
+
+main .leftBox .rightTopInfo {
+    height: 25%;
+    max-width: 450px;
+    position: absolute;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 30px;
+    color: #855f14;
+}
+
+.leftBox .rightTopInfo img {
+    height: 40px;
+    width: 100px;
+}
+
+.leftBox #author {
+    position: absolute;
+    bottom: 5%;
+    color: #855f14;
+
+}
+
+main .rightBox {
+    margin: auto;
+    height: calc(100vh - 70px);
+    width: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main .container #rightBoxWrapper a {
+    text-decoration: none;
+}
+
+
+main .rightBox .formContainer {
+    width: 500px;
+    margin: auto;
+    padding: 5vh 5vh 15vh 5vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: calc(95vh - 70px);
+}
+
+.rightBox .topBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.rightBox .topBox p {
+    margin-top: 4%;
+    display: none;
+}
+
+.rightBox .bottomBox .inpCheckbox {
+    display: flex;
+    padding-bottom: 4%;
+    gap: 5px;
+    font-size: .8rem;
+    align-items: baseline;
+}
+
+.rightBox .bottomBox form input {
+    outline: none;
+}
+
+main .rightBox .topBox {
+    height: 15%;
+    width: 100%;
+}
+
+main .rightBox .bottomBox {
+    height: 85%;
+    width: 100%;
+}
+
+#rightBoxWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+}
+
+#rightBoxWrapper .login {
+    display: flex;
+    height: 5vh;
+    padding: 0 10px;
+    align-items: center;
+    font-size: 0.9rem;
+    padding-top: 3px;
+    right: 10px;
+    position: absolute;
+
+}
+
+.rightBox .bottomBox .nameInfo {
+    padding: 4% 0;
+}
+
+
+.bottomBox .nameInfo div {
+    width: 48%;
+}
+
+.bottomBox .nameInfo input {
+    width: 100%;
+}
+
+.rightBox .bottomBox .inpEmail {
+    padding: 4% 0px;
+}
+
+.inpEmail input {
+    width: 100%;
+}
+
+.inpPassword input {
+    width: 100%;
+}
+
+.rightBox .bottomBox .inpPassword {
+    padding: 4% 0;
+}
+
+.rightBox .bottomBox button {
+    padding: 5px;
+    margin-top: 4%;
+    width: 150px;
+    border: none;
+    border-radius: 4px;
+    height: 40px;
+    background-color: #ea4b8a;
+    color: white;
+}
+
+.rightBox .bottomBox .policy {
+    margin-top: 4%;
+    font-size: .7rem;
+}
+
+.inputStyle {
+    background-color: #f3f3f3;
+    border: none;
+    height: 30px;
+    border-radius: 4px;
+    margin-top: 3px;
+    padding-left: 5px;
+    height: 35px;
+}
+
+.rightBox .bottomBox form label {
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+
+main {
+    height: calc(100vh - 70px);
+    width: 100vw;
+}
+
+
+main .container {
+    display: flex;
+    justify-content: center;
+}
+
+main .leftBox {
+    height: calc(100vh - 70px);
+    width: 35%;
+    background-color: #f4d284;
+    max-width: 450px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+}
+
+main .leftBox img {
+    object-fit: contain;
+    max-width: 450px;
+    width: 100%;
+    height: 100%;
+}
+
+main .rightBox {
+    margin: auto;
+    height: calc(100vh - 70px);
+    width: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.bottomBox form h6 {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #afafaf;
+    line-height: 0.1em;
+    margin: 20px 0 20px;
+    font-size: .85rem;
+    font-weight: 400;
+}
+
+h6 span {
+    background: #fff;
+    padding: 0 10px;
+}
+
+.bottomBox .google img,.bottomBox .gamil img{
+   height: 30px;
+   padding: 2px;
+}
+
+.bottomBox .google,.bottomBox .gamil{
+    border: .5px solid rgb(80, 80, 80);
+    width: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0px;
+    border-radius: 5px;
+    gap: 5px;
+    font-weight: 500;
+    color: rgb(80, 80, 80);
+}
+
+
+
+@media (max-width: 1200px) {
+
+
+    main .leftBox,
+    main .rightBox {
+        height: calc(100vh - 70px);
+        width: 50%;
+    }
+
+    main .rightBox .formContainer {
+        width: 90%;
+
+    }
+}
+
+@media (max-width: 1100px) {
+
+
+    main .leftBox {
+        width: 45%;
+    }
+
+    main .rightBox {
+        width: 55%;
+    }
+
+    #rightBoxWrapper {
+        width: 100%;
+    }
+
+    main .rightBox .formContainer {
+        width: 100%;
+
+    }
+}
+
+
+
+@media (max-width: 768px) {
+
+
+    main .leftBox {
+        display: none;
+
+    }
+
+    #rightBoxWrapper {
+        width: 90%;
+    }
+
+    main .rightBox {
+        width: 100%;
+        align-items: flex-start;
+
+    }
+
+    main .rightBox .formContainer {
+        width: 70%;
+
+    }
+
+    main .rightBox .topBox h2 {
+        font-size: 2rem;
+    }
+
+    .inputStyle,
+    .rightBox .bottomBox input,
+    .rightBox .bottomBox button {
+        width: 100%;
+
+    }
+
+
+    main .rightBox .topBox h2 {
+        font-size: 1.5rem;
+    }
+
+    h2,
+    .rightBox .bottomBox form label {
+        font-size: smaller;
+
+    }
+}
+
+main .leftBox img {
+    max-height: 100%;
+
+}
+
+
+@media (max-width: 576px) {
+
+    main .leftBox {
+        display: none;
+    }
+
+    #rightBoxWrapper {
+        width: 90%;
+    }
+
+    main .rightBox {
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    main .rightBox .topBox h2 {
+        font-size: 1.5rem;
+    }
+
+    main .rightBox .formContainer {
+        width: 100%;
+    }
+
+    .inputStyle,
+    .rightBox .bottomBox input,
+    .rightBox .bottomBox button {
+        width: 100%;
+    }
+
+    h2,
+    .rightBox .bottomBox form label {
+        font-size: smaller;
+    }
+}
+
+
+@media (max-width: 576px) {
+
+    main .rightBox .formContainer {
+        width: 100%;
+    }
+
+}
+
+
+main .leftBox img {
+    max-height: 100%;
+
+}

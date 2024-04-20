@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css"
+        integrity="sha512-0p3K0H3S6Q4bEWZ/WmC94Tgit2ular2/n0ESdfEX8l172YyQj8re1Wu9s/HT9T/T2osUw5Gx/6pAZNk3UKbESw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"
+        integrity="sha512-lOrm9FgT1LKOJRUXF3tp6QaMorJftUjowOWiDcG5GFZ/q7ukof19V0HKx/GWzXCdt9zYju3/KhBNdCLzK8b90Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
+
+
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/layout.css" />
+    <link rel="stylesheet" href="/css/utility.css" />
+    <script src="/js/jquery-3.7.1 copy.js"></script>
+    <script src="/js/layout.js"></script>
+    <link rel="stylesheet" href="/css/header.css" type="text/css" />
+    <title>Dribble</title>
+</head>
+
+<body>
+    <%- include('../partials/header')%>
+        <div class="bodyWrap">
+            <div class="sidebarWrap ">
+                <div class="barMenu ">
+                    <div class="back"><img src="/svgs/cross.svg" alt=""></div>
+                    <div class="webInfo">
+                        <img src="/svgs/dribble-color.svg" alt="">
+                        <p>Dribble</p>
+                    </div>
+                    <hr>
+                    <div class="menuList">
+                        <div class="listItem">
+                            <p>
+                                Inspiration</p>
+                        </div>
+
+                        <div class="listItem">
+                            <p>Find Work</p>
+                        </div>
+
+                        <div class="listItem">
+                            <p>Learn Designe</p>
+                        </div>
+
+                        <div class="listItem">
+                            <p>Go Pro</p>
+                        </div>
+
+                        <div class="listItem">
+                            <p>Hire Designers</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <main><%- body %></main>
+        </div>
+        <%- include('../partials/footer')%>
+
+        <script>
+            <% if (flash.success && flash.success.length > 0) {
+               flash.success.forEach(function(message) { %>
+                 new Noty({
+                   theme: "metroui",
+                   text: "<%= message %>",
+                   type: 'success',
+                   layout: 'topCenter',
+                   timeout: 1000,
+                   progressBar: false
+                 }).show();
+               <% }); %>
+            <% } %>
+          
+            <% if (flash.error && flash.error.length > 0) {
+               flash.error.forEach(function(message) { %>
+                 new Noty({
+                   theme: "metroui",
+                   text: "<%= message %>",
+                   type: 'error',
+                   layout: 'topCenter',
+                   timeout: 1000,
+                   progressBar: false
+                 }).show();
+               <% }); %>
+            <% } %>
+          </script>
+          
+
+</body>
+
+</html>
